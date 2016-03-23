@@ -57,4 +57,11 @@ class SimpleCustomTabBarController: UIViewController {
       self.tabButtons[index].selected = true
     }    
   }
+  
+  override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+    if self.destinationIdentifier == identifier {
+      return false
+    }
+    return true
+  }
 }
