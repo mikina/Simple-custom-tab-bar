@@ -15,10 +15,19 @@ class SimpleCustomTabBarController: UIViewController {
   weak var destinationVC: UIViewController?
   var previousVC: UIViewController?
   @IBOutlet weak var container: UIView!
+  @IBOutlet var tabButtons: [UIButton]!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     self.viewControllersCache = NSMutableDictionary();
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    if self.childViewControllers.count < 1 {
+      self.performSegueWithIdentifier("vc1", sender: self.tabButtons[0])
+    }
   }
 
   override func didReceiveMemoryWarning() {
@@ -39,5 +48,13 @@ class SimpleCustomTabBarController: UIViewController {
     
     self.destinationIdentifier = identifier
     self.destinationVC = self.viewControllersCache?.objectForKey(identifier) as? UIViewController
+    
+    for button in self.tabButtons {
+      button.selected = false
+    }
+    
+    if let button = sender as? UIButton, let index = self.tabButtons.indexOf(button) {
+      self.tabButtons[index].selected = true
+    }    
   }
 }

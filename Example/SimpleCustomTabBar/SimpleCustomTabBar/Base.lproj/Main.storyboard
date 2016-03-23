@@ -16,22 +16,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xoH-Uo-c5c">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xoH-Uo-c5c" userLabel="TabBar">
                                 <rect key="frame" x="0.0" y="540" width="600" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0r-Ss-VkS">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0r-Ss-VkS">
                                         <rect key="frame" x="0.0" y="0.0" width="189" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="Ww2-QO-zkQ"/>
                                         </constraints>
                                         <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.35686274509999999" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="1" green="0.38431372549999998" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="1" green="0.38431372549999998" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="focused">
                                             <color key="titleColor" red="1" green="0.38431372549999998" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <segue destination="3Ip-hR-eUk" kind="custom" identifier="vc1" customClass="SimpleCustomTabBarSegue" customModule="SimpleCustomTabBar" customModuleProvider="target" id="eSg-Gb-vKH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEl-bj-Nqc">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEl-bj-Nqc">
                                         <rect key="frame" x="411" y="0.0" width="189" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="iWO-gi-x0x"/>
@@ -39,17 +49,35 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" red="0.35686274509999999" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="1" green="0.38431372549999998" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="1" green="0.38431372549999998" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="focused">
+                                            <color key="titleColor" red="1" green="0.38431372549999998" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="76f-Uz-EN7" kind="custom" identifier="vc3" customClass="SimpleCustomTabBarSegue" customModule="SimpleCustomTabBar" customModuleProvider="target" id="Qlx-GM-Uxe"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsQ-Bv-G3d">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsQ-Bv-G3d">
                                         <rect key="frame" x="206" y="0.0" width="188" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="Wuv-bl-T2g"/>
                                         </constraints>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" red="0.35686274509999999" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="1" green="0.38431372549999998" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="1" green="0.38431372549999998" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="focused">
+                                            <color key="titleColor" red="1" green="0.38431372549999998" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <segue destination="3H6-Aj-caT" kind="custom" identifier="vc2" customClass="SimpleCustomTabBarSegue" customModule="SimpleCustomTabBar" customModuleProvider="target" id="yGf-fi-nt5"/>
@@ -112,11 +140,14 @@
                     </view>
                     <connections>
                         <outlet property="container" destination="FNk-gi-qym" id="kCb-KO-gny"/>
+                        <outletCollection property="tabButtons" destination="l0r-Ss-VkS" collectionClass="NSMutableArray" id="rDO-ey-EcR"/>
+                        <outletCollection property="tabButtons" destination="nEl-bj-Nqc" collectionClass="NSMutableArray" id="9FA-W6-OG3"/>
+                        <outletCollection property="tabButtons" destination="qsQ-Bv-G3d" collectionClass="NSMutableArray" id="fom-1j-hhX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="313" y="463"/>
+            <point key="canvasLocation" x="348" y="463"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HUb-m9-6NT">
