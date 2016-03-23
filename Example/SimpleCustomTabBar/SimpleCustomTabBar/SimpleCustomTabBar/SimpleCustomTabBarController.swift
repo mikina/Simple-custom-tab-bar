@@ -60,6 +60,10 @@ class SimpleCustomTabBarController: UIViewController {
   
   override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
     if self.destinationIdentifier == identifier {
+      // We want to go back in navigation bar when user hit currently selected tab
+      if let nav = self.destinationVC as? UINavigationController {
+        nav.popToRootViewControllerAnimated(true)
+      }
       return false
     }
     return true
