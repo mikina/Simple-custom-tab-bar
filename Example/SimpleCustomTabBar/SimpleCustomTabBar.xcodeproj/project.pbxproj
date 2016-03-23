@@ -12,6 +12,8 @@
 		27CE16711CA2B5CA005A7372 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CE166F1CA2B5CA005A7372 /* Main.storyboard */; };
 		27CE16731CA2B5CA005A7372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27CE16721CA2B5CA005A7372 /* Assets.xcassets */; };
 		27CE16761CA2B5CA005A7372 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CE16741CA2B5CA005A7372 /* LaunchScreen.storyboard */; };
+		27CE167F1CA2CC24005A7372 /* SimpleCustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE167E1CA2CC24005A7372 /* SimpleCustomTabBarController.swift */; };
+		27CE16811CA2D566005A7372 /* SimpleCustomTabBarSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE16801CA2D566005A7372 /* SimpleCustomTabBarSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		27CE16721CA2B5CA005A7372 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27CE16751CA2B5CA005A7372 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27CE16771CA2B5CA005A7372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27CE167E1CA2CC24005A7372 /* SimpleCustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCustomTabBarController.swift; sourceTree = "<group>"; };
+		27CE16801CA2D566005A7372 /* SimpleCustomTabBarSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCustomTabBarSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +58,22 @@
 		27CE166A1CA2B5CA005A7372 /* SimpleCustomTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				27CE167D1CA2CBF6005A7372 /* SimpleCustomTabBar */,
 				27CE166B1CA2B5CA005A7372 /* AppDelegate.swift */,
 				27CE166D1CA2B5CA005A7372 /* ViewController.swift */,
 				27CE166F1CA2B5CA005A7372 /* Main.storyboard */,
 				27CE16721CA2B5CA005A7372 /* Assets.xcassets */,
 				27CE16741CA2B5CA005A7372 /* LaunchScreen.storyboard */,
 				27CE16771CA2B5CA005A7372 /* Info.plist */,
+			);
+			path = SimpleCustomTabBar;
+			sourceTree = "<group>";
+		};
+		27CE167D1CA2CBF6005A7372 /* SimpleCustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				27CE167E1CA2CC24005A7372 /* SimpleCustomTabBarController.swift */,
+				27CE16801CA2D566005A7372 /* SimpleCustomTabBarSegue.swift */,
 			);
 			path = SimpleCustomTabBar;
 			sourceTree = "<group>";
@@ -136,6 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				27CE166E1CA2B5CA005A7372 /* ViewController.swift in Sources */,
+				27CE167F1CA2CC24005A7372 /* SimpleCustomTabBarController.swift in Sources */,
+				27CE16811CA2D566005A7372 /* SimpleCustomTabBarSegue.swift in Sources */,
 				27CE166C1CA2B5CA005A7372 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
