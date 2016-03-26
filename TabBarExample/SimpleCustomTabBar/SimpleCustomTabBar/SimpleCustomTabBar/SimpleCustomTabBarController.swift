@@ -26,7 +26,7 @@ class SimpleCustomTabBarController: UIViewController {
     self.viewControllersCache = NSMutableDictionary();
     NSNotificationCenter.defaultCenter().addObserver(
       self,
-      selector: #selector(SimpleCustomTabBarController.finishedTransition(_:)),
+      selector: #selector(SimpleCustomTabBarController.startedTransition(_:)),
       name: "PageHasStartedTransition",
       object: nil)
     
@@ -93,7 +93,7 @@ class SimpleCustomTabBarController: UIViewController {
     }
   }
   
-  func finishedTransition(notification: NSNotification) {
+  func startedTransition(notification: NSNotification) {
     if let item = notification.object as? TabBarVisibilityProtocol {
       if item.isVisible {
         self.showTabBar()
