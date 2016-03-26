@@ -7,6 +7,7 @@
 //
 
 import UIKit
+let kPageHasStartedTransition = "PageHasStartedTransition"
 
 class SimpleCustomTabBarController: UIViewController {
 
@@ -15,6 +16,8 @@ class SimpleCustomTabBarController: UIViewController {
   weak var destinationVC: UIViewController?
   var previousVC: UIViewController?
   var tabBarVisible = true
+  let animationDuration = 0.3 //duration of show/hide tab bar animation
+  let bottomPosition = 0 //bottom tab bar position, 0 - means it will stick to bottom
   @IBOutlet weak var container: UIView!
   @IBOutlet var tabButtons: [UIButton]!
   @IBOutlet weak var tabBar: UIView!
@@ -27,7 +30,7 @@ class SimpleCustomTabBarController: UIViewController {
     NSNotificationCenter.defaultCenter().addObserver(
       self,
       selector: #selector(SimpleCustomTabBarController.startedTransition(_:)),
-      name: "PageHasStartedTransition",
+      name: kPageHasStartedTransition,
       object: nil)
     
   }
@@ -80,15 +83,15 @@ class SimpleCustomTabBarController: UIViewController {
   }
   
   func hideTabBar() {
-    self.tabBarBottom.constant = -60
-    UIView.animateWithDuration(0.3) {
+    self.tabBarBottom.constant = -self.tabBarHeight.constant
+    UIView.animateWithDuration(self.animationDuration) {
       self.view.layoutIfNeeded()
     }
   }
   
   func showTabBar() {
-    self.tabBarBottom.constant = 0
-    UIView.animateWithDuration(0.3) {
+    self.tabBarBottom.constant = CGFloat(self.bottomPosition)
+    UIView.animateWithDuration(self.animationDuration) {
       self.view.layoutIfNeeded()
     }
   }

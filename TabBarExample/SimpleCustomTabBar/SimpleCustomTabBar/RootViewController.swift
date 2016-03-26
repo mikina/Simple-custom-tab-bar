@@ -15,6 +15,6 @@ class RootViewController: UIViewController, UINavigationControllerDelegate {
   }
   
   func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
-    NSNotificationCenter.defaultCenter().postNotificationName("PageHasStartedTransition", object: viewController, userInfo: nil)
+    NSNotificationCenter.defaultCenter().postNotificationName(kPageHasStartedTransition, object: viewController, userInfo: nil)
   }
 }
