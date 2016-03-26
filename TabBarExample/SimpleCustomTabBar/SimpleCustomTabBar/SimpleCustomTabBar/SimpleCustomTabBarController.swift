@@ -14,12 +14,22 @@ class SimpleCustomTabBarController: UIViewController {
   var destinationIdentifier: String?
   weak var destinationVC: UIViewController?
   var previousVC: UIViewController?
+  var tabBarVisible = true
   @IBOutlet weak var container: UIView!
   @IBOutlet var tabButtons: [UIButton]!
+  @IBOutlet weak var tabBar: UIView!
+  @IBOutlet weak var tabBarHeight: NSLayoutConstraint!
+  @IBOutlet weak var tabBarBottom: NSLayoutConstraint!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     self.viewControllersCache = NSMutableDictionary();
+    NSNotificationCenter.defaultCenter().addObserver(
+      self,
+      selector: #selector(SimpleCustomTabBarController.finishedTransition(_:)),
+      name: "PageHasStartedTransition",
+      object: nil)
+    
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -67,5 +77,30 @@ class SimpleCustomTabBarController: UIViewController {
       return false
     }
     return true
+  }
+  
+  func hideTabBar() {
+    self.tabBarBottom.constant = -60
+    UIView.animateWithDuration(0.3) {
+      self.view.layoutIfNeeded()
+    }
+  }
+  
+  func showTabBar() {
+    self.tabBarBottom.constant = 0
+    UIView.animateWithDuration(0.3) {
+      self.view.layoutIfNeeded()
+    }
+  }
+  
+  func finishedTransition(notification: NSNotification) {
+    if let item = notification.object as? TabBarVisibilityProtocol {
+      if item.isVisible {
+        self.showTabBar()
+      }
+      else {
+        self.hideTabBar()
+      }
+    }
   }
 }

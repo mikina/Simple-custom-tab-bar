@@ -14,6 +14,10 @@
 		27CE16761CA2B5CA005A7372 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CE16741CA2B5CA005A7372 /* LaunchScreen.storyboard */; };
 		27CE167F1CA2CC24005A7372 /* SimpleCustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE167E1CA2CC24005A7372 /* SimpleCustomTabBarController.swift */; };
 		27CE16811CA2D566005A7372 /* SimpleCustomTabBarSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE16801CA2D566005A7372 /* SimpleCustomTabBarSegue.swift */; };
+		27F113341CA71156002D8ACB /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F113331CA71156002D8ACB /* ModalViewController.swift */; };
+		27F113361CA71E1E002D8ACB /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F113351CA71E1E002D8ACB /* PageViewController.swift */; };
+		27F1133A1CA73F56002D8ACB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F113391CA73F56002D8ACB /* RootViewController.swift */; };
+		27F1133C1CA742EC002D8ACB /* TabBarVisibilityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F1133B1CA742EC002D8ACB /* TabBarVisibilityProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		27CE16771CA2B5CA005A7372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27CE167E1CA2CC24005A7372 /* SimpleCustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCustomTabBarController.swift; sourceTree = "<group>"; };
 		27CE16801CA2D566005A7372 /* SimpleCustomTabBarSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCustomTabBarSegue.swift; sourceTree = "<group>"; };
+		27F113331CA71156002D8ACB /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		27F113351CA71E1E002D8ACB /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		27F113391CA73F56002D8ACB /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		27F1133B1CA742EC002D8ACB /* TabBarVisibilityProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVisibilityProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +69,13 @@
 				27CE167D1CA2CBF6005A7372 /* SimpleCustomTabBar */,
 				27CE166B1CA2B5CA005A7372 /* AppDelegate.swift */,
 				27CE166D1CA2B5CA005A7372 /* ViewController.swift */,
+				27F113351CA71E1E002D8ACB /* PageViewController.swift */,
 				27CE166F1CA2B5CA005A7372 /* Main.storyboard */,
 				27CE16721CA2B5CA005A7372 /* Assets.xcassets */,
 				27CE16741CA2B5CA005A7372 /* LaunchScreen.storyboard */,
 				27CE16771CA2B5CA005A7372 /* Info.plist */,
+				27F113391CA73F56002D8ACB /* RootViewController.swift */,
+				27F1133B1CA742EC002D8ACB /* TabBarVisibilityProtocol.swift */,
 			);
 			path = SimpleCustomTabBar;
 			sourceTree = "<group>";
@@ -74,6 +85,7 @@
 			children = (
 				27CE167E1CA2CC24005A7372 /* SimpleCustomTabBarController.swift */,
 				27CE16801CA2D566005A7372 /* SimpleCustomTabBarSegue.swift */,
+				27F113331CA71156002D8ACB /* ModalViewController.swift */,
 			);
 			path = SimpleCustomTabBar;
 			sourceTree = "<group>";
@@ -150,8 +162,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				27CE166E1CA2B5CA005A7372 /* ViewController.swift in Sources */,
+				27F113341CA71156002D8ACB /* ModalViewController.swift in Sources */,
 				27CE167F1CA2CC24005A7372 /* SimpleCustomTabBarController.swift in Sources */,
+				27F113361CA71E1E002D8ACB /* PageViewController.swift in Sources */,
+				27F1133C1CA742EC002D8ACB /* TabBarVisibilityProtocol.swift in Sources */,
 				27CE16811CA2D566005A7372 /* SimpleCustomTabBarSegue.swift in Sources */,
+				27F1133A1CA73F56002D8ACB /* RootViewController.swift in Sources */,
 				27CE166C1CA2B5CA005A7372 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +322,7 @@
 				27CE167C1CA2B5CA005A7372 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
