@@ -16,6 +16,7 @@ class SimpleCustomTabBarController: UIViewController {
   weak var destinationVC: UIViewController?
   var previousVC: UIViewController?
   var tabBarVisible = true
+  var manualTransition = false
   let animationDuration = 0.3 //duration of show/hide tab bar animation
   let bottomPosition = 0 //bottom tab bar position, 0 - means it will stick to bottom
   @IBOutlet weak var container: UIView!
@@ -65,7 +66,11 @@ class SimpleCustomTabBarController: UIViewController {
     
     if var hasSwipeBack = self.destinationVC as? SwipeBackPositionProtocol {
       hasSwipeBack.positionClosure = { position in
-        self.calculateTabBarPosition(position)
+        if let nav = hasSwipeBack as? UINavigationController, let previousVC = nav.viewControllers.last as? TabBarVisibilityProtocol {
+          if previousVC.isVisible && !self.tabBarVisible {
+            self.calculateTabBarPosition(position)
+          }
+        }
       }
     }
     
@@ -91,8 +96,12 @@ class SimpleCustomTabBarController: UIViewController {
   
   func hideTabBar() {
     self.tabBarBottom.constant = -self.tabBarHeight.constant
-    UIView.animateWithDuration(self.animationDuration) {
+    UIView.animateWithDuration(self.animationDuration, animations: {
       self.view.layoutIfNeeded()
+    }) { (done) in
+      if done {
+        self.tabBarVisible = false
+      }
     }
   }
   
@@ -104,14 +113,23 @@ class SimpleCustomTabBarController: UIViewController {
     { (done) in
       if done {
         self.swipeBackCancelled = false
+        self.tabBarVisible = false
+        self.manualTransition = false
       }
     }
   }
   
   func showTabBar() {
     self.tabBarBottom.constant = CGFloat(self.bottomPosition)
-    UIView.animateWithDuration(self.animationDuration) {
+    
+    UIView.animateWithDuration(self.animationDuration, animations: { 
       self.view.layoutIfNeeded()
+      }) { (done) in
+        if done {
+          if !self.manualTransition {
+            self.tabBarVisible = true
+          }
+        }
     }
   }
   
@@ -127,6 +145,7 @@ class SimpleCustomTabBarController: UIViewController {
   }
   
   func calculateTabBarPosition(position: Int) {
+    self.manualTransition = true
     if position <= 0 {
       self.swipeBackCancelled = true
       self.hideTabBarOnCancel()
