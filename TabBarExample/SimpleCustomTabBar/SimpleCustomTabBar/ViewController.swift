@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: RootViewController, TabBarVisibilityProtocol {
+class ViewController: UIViewController, TabBarVisibilityProtocol {
 
   var isVisible: Bool = false
   

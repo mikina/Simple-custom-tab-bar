@@ -63,7 +63,7 @@ class SimpleCustomTabBarController: UIViewController {
     self.destinationIdentifier = identifier
     self.destinationVC = self.viewControllersCache?.objectForKey(identifier) as? UIViewController
     
-    if let nav = self.destinationVC as? UINavigationController, var hasSwipeBack = nav.viewControllers[0] as? SwipeBackPositionProtocol {
+    if var hasSwipeBack = self.destinationVC as? SwipeBackPositionProtocol {
       hasSwipeBack.positionClosure = { position in
         self.calculateTabBarPosition(position)
       }

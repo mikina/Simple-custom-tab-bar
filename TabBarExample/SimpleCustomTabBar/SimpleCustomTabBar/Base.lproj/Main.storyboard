@@ -330,10 +330,10 @@
             </objects>
             <point key="canvasLocation" x="1099" y="1469"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Custom Navigation Controller-->
         <scene sceneID="GnD-UK-5Nj">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rvd-wT-fxQ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rvd-wT-fxQ" customClass="CustomNavigationController" customModule="SimpleCustomTabBar" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pw9-xN-Q7P">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

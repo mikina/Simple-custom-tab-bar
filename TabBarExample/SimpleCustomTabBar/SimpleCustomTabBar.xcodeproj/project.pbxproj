@@ -15,6 +15,7 @@
 		27CE167F1CA2CC24005A7372 /* SimpleCustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE167E1CA2CC24005A7372 /* SimpleCustomTabBarController.swift */; };
 		27CE16811CA2D566005A7372 /* SimpleCustomTabBarSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE16801CA2D566005A7372 /* SimpleCustomTabBarSegue.swift */; };
 		27ECC4801CA94B2600E16EAB /* SwipeBackPositionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECC47F1CA94B2600E16EAB /* SwipeBackPositionProtocol.swift */; };
+		27ECC4821CA9A8F800E16EAB /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECC4811CA9A8F800E16EAB /* CustomNavigationController.swift */; };
 		27F113341CA71156002D8ACB /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F113331CA71156002D8ACB /* ModalViewController.swift */; };
 		27F113361CA71E1E002D8ACB /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F113351CA71E1E002D8ACB /* PageViewController.swift */; };
 		27F1133A1CA73F56002D8ACB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F113391CA73F56002D8ACB /* RootViewController.swift */; };
@@ -32,6 +33,7 @@
 		27CE167E1CA2CC24005A7372 /* SimpleCustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCustomTabBarController.swift; sourceTree = "<group>"; };
 		27CE16801CA2D566005A7372 /* SimpleCustomTabBarSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCustomTabBarSegue.swift; sourceTree = "<group>"; };
 		27ECC47F1CA94B2600E16EAB /* SwipeBackPositionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeBackPositionProtocol.swift; sourceTree = "<group>"; };
+		27ECC4811CA9A8F800E16EAB /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		27F113331CA71156002D8ACB /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		27F113351CA71E1E002D8ACB /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		27F113391CA73F56002D8ACB /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				27F113391CA73F56002D8ACB /* RootViewController.swift */,
 				27F1133B1CA742EC002D8ACB /* TabBarVisibilityProtocol.swift */,
 				27ECC47F1CA94B2600E16EAB /* SwipeBackPositionProtocol.swift */,
+				27ECC4811CA9A8F800E16EAB /* CustomNavigationController.swift */,
 			);
 			path = SimpleCustomTabBar;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				27F113361CA71E1E002D8ACB /* PageViewController.swift in Sources */,
 				27ECC4801CA94B2600E16EAB /* SwipeBackPositionProtocol.swift in Sources */,
 				27F1133C1CA742EC002D8ACB /* TabBarVisibilityProtocol.swift in Sources */,
+				27ECC4821CA9A8F800E16EAB /* CustomNavigationController.swift in Sources */,
 				27CE16811CA2D566005A7372 /* SimpleCustomTabBarSegue.swift in Sources */,
 				27F1133A1CA73F56002D8ACB /* RootViewController.swift in Sources */,
 				27CE166C1CA2B5CA005A7372 /* AppDelegate.swift in Sources */,

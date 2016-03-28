@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PageViewController: RootViewController, TabBarVisibilityProtocol {
+class PageViewController: UIViewController, TabBarVisibilityProtocol {
 
   var isVisible: Bool = true
 
