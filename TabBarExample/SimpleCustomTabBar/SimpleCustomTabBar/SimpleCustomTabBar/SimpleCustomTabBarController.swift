@@ -23,6 +23,7 @@ class SimpleCustomTabBarController: UIViewController {
   @IBOutlet weak var tabBar: UIView!
   @IBOutlet weak var tabBarHeight: NSLayoutConstraint!
   @IBOutlet weak var tabBarBottom: NSLayoutConstraint!
+  var swipeBackCancelled = false
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -62,6 +63,12 @@ class SimpleCustomTabBarController: UIViewController {
     self.destinationIdentifier = identifier
     self.destinationVC = self.viewControllersCache?.objectForKey(identifier) as? UIViewController
     
+    if let nav = self.destinationVC as? UINavigationController, var hasSwipeBack = nav.viewControllers[0] as? SwipeBackPositionProtocol {
+      hasSwipeBack.positionClosure = { position in
+        self.calculateTabBarPosition(position)
+      }
+    }
+    
     for button in self.tabButtons {
       button.selected = false
     }
@@ -89,6 +96,18 @@ class SimpleCustomTabBarController: UIViewController {
     }
   }
   
+  func hideTabBarOnCancel() {
+    self.tabBarBottom.constant = -self.tabBarHeight.constant
+    UIView.animateWithDuration(self.animationDuration, animations: {
+      self.view.layoutIfNeeded()
+      })
+    { (done) in
+      if done {
+        self.swipeBackCancelled = false
+      }
+    }
+  }
+  
   func showTabBar() {
     self.tabBarBottom.constant = CGFloat(self.bottomPosition)
     UIView.animateWithDuration(self.animationDuration) {
@@ -104,6 +123,21 @@ class SimpleCustomTabBarController: UIViewController {
       else {
         self.hideTabBar()
       }
+    }
+  }
+  
+  func calculateTabBarPosition(position: Int) {
+    if position <= 0 {
+      self.swipeBackCancelled = true
+      self.hideTabBarOnCancel()
+      return
+    }
+    
+    if !self.swipeBackCancelled {
+      let windowSize = self.view.frame.size.width
+      let percent = Double(position) / Double(windowSize)
+      let calculated = (self.tabBarHeight.constant * CGFloat(percent)) - self.tabBarHeight.constant
+      self.tabBarBottom.constant = calculated
     }
   }
 }

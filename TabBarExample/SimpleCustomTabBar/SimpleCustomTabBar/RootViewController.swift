@@ -8,10 +8,25 @@
 
 import UIKit
 
-class RootViewController: UIViewController, UINavigationControllerDelegate {
+class RootViewController: UIViewController, UINavigationControllerDelegate, UIGestureRecognizerDelegate, SwipeBackPositionProtocol {
+  var positionClosure: ((position: Int)->())?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     self.navigationController?.delegate = self
+    self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+    self.navigationController?.interactivePopGestureRecognizer?.addTarget(self, action: #selector(RootViewController.test(_:)))
+  }
+  
+  func test(gesture: UIPanGestureRecognizer) {
+    if let position = self.positionClosure, let gestureView = gesture.view {
+      let translation = gesture.translationInView(gestureView)
+      position(position: Int(translation.x))
+    }
+  }
+  
+  func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    return true
   }
   
   func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
@@ -25,6 +40,10 @@ class RootViewController: UIViewController, UINavigationControllerDelegate {
         }
       })
     }
+    NSNotificationCenter.defaultCenter().postNotificationName(kPageHasStartedTransition, object: viewController, userInfo: nil)
+  }
+  
+  func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
     NSNotificationCenter.defaultCenter().postNotificationName(kPageHasStartedTransition, object: viewController, userInfo: nil)
   }
 }
