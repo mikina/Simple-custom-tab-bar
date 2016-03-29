@@ -28,6 +28,17 @@ class CustomNavigationController: UINavigationController, UINavigationController
   func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
     return true
   }
+  
+  // When interactivePopGestureRecognizer delegate is set, we need to check if
+  // navigation controller has more than one vc. If not don't perform edge pan back gesture.
+  func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+    if gestureRecognizer.isKindOfClass(UIScreenEdgePanGestureRecognizer.self)
+        && self.viewControllers.count == 1 {
+      return false
+    }
+    
+    return true
+  }
 
   func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
     // We send notification when transition is started, it's possible to cancel transition when
