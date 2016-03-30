@@ -95,9 +95,11 @@ class SimpleCustomTabBarController: UIViewController {
   }
   
   func hideTabBar() {
+    self.tabBar.layoutIfNeeded()
     self.tabBarBottom.constant = -self.tabBarHeight.constant
     UIView.animateWithDuration(self.animationDuration, animations: {
-      self.view.layoutIfNeeded()
+      self.tabBar.setNeedsLayout()
+      self.tabBar.layoutIfNeeded()
     }) { (done) in
       if done {
         self.tabBarVisible = false
@@ -106,9 +108,11 @@ class SimpleCustomTabBarController: UIViewController {
   }
   
   func hideTabBarOnCancel() {
+    self.tabBar.layoutIfNeeded()
     self.tabBarBottom.constant = -self.tabBarHeight.constant
     UIView.animateWithDuration(self.animationDuration, animations: {
-      self.view.layoutIfNeeded()
+      self.tabBar.setNeedsLayout()
+      self.tabBar.layoutIfNeeded()
       })
     { (done) in
       if done {
@@ -120,10 +124,12 @@ class SimpleCustomTabBarController: UIViewController {
   }
   
   func showTabBar() {
+    self.tabBar.layoutIfNeeded()
     self.tabBarBottom.constant = CGFloat(self.bottomPosition)
     
-    UIView.animateWithDuration(self.animationDuration, animations: { 
-      self.view.layoutIfNeeded()
+    UIView.animateWithDuration(self.animationDuration, animations: {
+      self.tabBar.setNeedsLayout()
+      self.tabBar.layoutIfNeeded()
       }) { (done) in
         if done {
           if !self.manualTransition {
@@ -153,10 +159,12 @@ class SimpleCustomTabBarController: UIViewController {
     }
     
     if !self.swipeBackCancelled {
+      self.tabBar.layoutIfNeeded()
       let windowSize = self.view.frame.size.width
       let percent = Double(position) / Double(windowSize)
       let calculated = (self.tabBarHeight.constant * CGFloat(percent)) - self.tabBarHeight.constant
       self.tabBarBottom.constant = calculated
+      self.tabBar.layoutIfNeeded()
     }
   }
 }
