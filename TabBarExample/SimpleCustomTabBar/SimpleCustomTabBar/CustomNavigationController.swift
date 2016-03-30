@@ -10,6 +10,7 @@ import UIKit
 
 class CustomNavigationController: UINavigationController, UINavigationControllerDelegate, UIGestureRecognizerDelegate, SwipeBackPositionProtocol {
   var positionClosure: ((position: Int)->())?
+  var duringPushAnimation = false
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -37,6 +38,10 @@ class CustomNavigationController: UINavigationController, UINavigationController
       return false
     }
     
+    if self.duringPushAnimation {
+      return false
+    }
+    
     return true
   }
 
@@ -58,5 +63,11 @@ class CustomNavigationController: UINavigationController, UINavigationController
 
   func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
     NSNotificationCenter.defaultCenter().postNotificationName(kPageHasStartedTransition, object: viewController, userInfo: nil)
+    self.duringPushAnimation = false
+  }
+  
+  override func pushViewController(viewController: UIViewController, animated: Bool) {
+    super.pushViewController(viewController, animated: animated)
+    self.duringPushAnimation = true
   }
 }
