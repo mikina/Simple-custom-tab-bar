@@ -70,4 +70,9 @@ class CustomNavigationController: UINavigationController, UINavigationController
     super.pushViewController(viewController, animated: animated)
     self.duringPushAnimation = true
   }
+  
+  deinit {
+    self.delegate = nil
+    self.interactivePopGestureRecognizer?.delegate = nil
+  }
 }
