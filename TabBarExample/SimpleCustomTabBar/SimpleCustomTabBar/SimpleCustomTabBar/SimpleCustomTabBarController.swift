@@ -24,6 +24,7 @@ class SimpleCustomTabBarController: UIViewController {
   @IBOutlet weak var tabBar: UIView!
   @IBOutlet weak var tabBarHeight: NSLayoutConstraint!
   @IBOutlet weak var tabBarBottom: NSLayoutConstraint!
+  @IBOutlet weak var containerBottom: NSLayoutConstraint!
   var swipeBackCancelled = false
   
   override func viewDidLoad() {
@@ -71,6 +72,12 @@ class SimpleCustomTabBarController: UIViewController {
             self.calculateTabBarPosition(position)
           }
         }
+      }
+    }
+    
+    if let nav = self.destinationVC as? UINavigationController, let vc = nav.viewControllers.last as? TabBarVisibilityProtocol {
+      if vc.isVisible {
+        self.containerBottom.constant = self.tabBarHeight.constant
       }
     }
     

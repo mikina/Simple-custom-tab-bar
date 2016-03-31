@@ -83,7 +83,7 @@
                                             <color key="titleColor" red="1" green="0.38431372549999998" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="3H6-Aj-caT" kind="custom" identifier="vc2" customClass="SimpleCustomTabBarSegue" customModule="SimpleCustomTabBar" customModuleProvider="target" id="yGf-fi-nt5"/>
+                                            <segue destination="bFV-ww-kIN" kind="custom" identifier="vc2" customClass="SimpleCustomTabBarSegue" customModule="SimpleCustomTabBar" customModuleProvider="target" id="yGf-fi-nt5"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOC-LU-UPH">
@@ -140,6 +140,7 @@
                     </view>
                     <connections>
                         <outlet property="container" destination="FNk-gi-qym" id="kCb-KO-gny"/>
+                        <outlet property="containerBottom" destination="QG8-Fa-0IV" id="Gba-il-Vi2"/>
                         <outlet property="tabBar" destination="xoH-Uo-c5c" id="M4o-Jm-9wD"/>
                         <outlet property="tabBarBottom" destination="8jl-lD-559" id="bYd-OJ-e8G"/>
                         <outlet property="tabBarHeight" destination="l6S-xZ-4Jf" id="e6w-ik-xvD"/>
@@ -268,12 +269,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAt-9o-1JC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3498" y="77"/>
+            <point key="canvasLocation" x="4310" y="77"/>
         </scene>
-        <!--View Controller-->
+        <!--Text View Controller-->
         <scene sceneID="wGQ-PY-Tuc">
             <objects>
-                <viewController id="3H6-Aj-caT" sceneMemberID="viewController">
+                <viewController id="3H6-Aj-caT" customClass="TextViewController" customModule="SimpleCustomTabBar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uan-MG-Ubs"/>
                         <viewControllerLayoutGuide type="bottom" id="qSD-wg-UOS"/>
@@ -282,23 +283,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5RE-2L-7sO">
-                                <rect key="frame" x="295" y="289" width="10" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6k-KQ-4uq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. </mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5RE-2L-7sO" firstAttribute="centerX" secondItem="8Gm-dT-AEr" secondAttribute="centerX" id="g7N-h1-XLb"/>
-                            <constraint firstItem="5RE-2L-7sO" firstAttribute="centerY" secondItem="8Gm-dT-AEr" secondAttribute="centerY" id="wkD-aS-MID"/>
+                            <constraint firstItem="g6k-KQ-4uq" firstAttribute="leading" secondItem="8Gm-dT-AEr" secondAttribute="leading" id="IrI-zt-4gr"/>
+                            <constraint firstAttribute="trailing" secondItem="g6k-KQ-4uq" secondAttribute="trailing" id="PMo-RD-g77"/>
+                            <constraint firstItem="qSD-wg-UOS" firstAttribute="top" secondItem="g6k-KQ-4uq" secondAttribute="bottom" id="W9W-Vm-UTr"/>
+                            <constraint firstItem="g6k-KQ-4uq" firstAttribute="top" secondItem="8Gm-dT-AEr" secondAttribute="top" id="mF8-9V-6HK"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Qeu-FP-wW9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUH-WF-37w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1095" y="761"/>
+            <point key="canvasLocation" x="2093" y="708"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sKC-Fv-CZ7">
@@ -328,7 +333,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCC-gV-Cf2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1099" y="1469"/>
+            <point key="canvasLocation" x="978" y="1499"/>
         </scene>
         <!--Custom Navigation Controller-->
         <scene sceneID="GnD-UK-5Nj">
@@ -347,6 +352,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnP-ic-OWN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1089" y="50"/>
+        </scene>
+        <!--Custom Navigation Controller-->
+        <scene sceneID="NkD-5H-QmM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bFV-ww-kIN" customClass="CustomNavigationController" customModule="SimpleCustomTabBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mwg-Jk-RFi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3H6-Aj-caT" kind="relationship" relationship="rootViewController" id="Gkq-ew-LOe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BnZ-5w-I1E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1281" y="708"/>
         </scene>
     </scenes>
 </document>
