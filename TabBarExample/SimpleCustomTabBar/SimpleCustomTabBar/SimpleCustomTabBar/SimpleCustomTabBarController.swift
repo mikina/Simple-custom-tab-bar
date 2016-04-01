@@ -75,11 +75,16 @@ class SimpleCustomTabBarController: UIViewController {
       }
     }
     
+    // TODO: Changing bottom constraint actually don't play well. When background
+    // of container is different than white, is shows that container has ended just
+    // before hidden tab bar while animating.
+    /*
     if let nav = self.destinationVC as? UINavigationController, let vc = nav.viewControllers.last as? TabBarVisibilityProtocol {
       if vc.isVisible {
         self.containerBottom.constant = self.tabBarHeight.constant
       }
     }
+    */
     
     for button in self.tabButtons {
       button.selected = false
