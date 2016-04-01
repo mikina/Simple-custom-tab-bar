@@ -8,7 +8,10 @@
 
 import UIKit
 
-class TextViewController: UIViewController {
+class TextViewController: UIViewController, TabBarVisibilityProtocol {
+  
+  var isVisible: Bool = true
+  
   override func viewDidLoad() {
     super.viewDidLoad()
   }
